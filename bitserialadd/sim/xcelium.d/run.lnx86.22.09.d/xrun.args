@@ -1,0 +1,11 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+topaddtb.sv
+../rtl/ps.sv
+../rtl/serialadd.sv
+../rtl/sp.sv
+../rtl/topadd.sv
+-top
+topaddtb

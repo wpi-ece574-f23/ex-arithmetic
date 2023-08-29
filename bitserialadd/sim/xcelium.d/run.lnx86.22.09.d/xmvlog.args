@@ -1,0 +1,23 @@
+//
+// File created by:  xrun
+// Do not modify this file
+//
+-XLMODE
+./xcelium.d/run.lnx86.22.09.d
+-RUNMODE
+topaddtb.sv
+../rtl/ps.sv
+../rtl/serialadd.sv
+../rtl/sp.sv
+../rtl/topadd.sv
+-CDSLIB
+./xcelium.d/run.lnx86.22.09.d/cdsrun.lib
+-HDLVAR
+./xcelium.d/run.lnx86.22.09.d/hdlrun.var
+-no_analogsolver
+-MESSAGES
+-UPDATE
+-XLLIBSTORE
+./xcelium.d/run.lnx86.22.09.d/xllibs
+-ALLOWUNBOUND
+-hastop

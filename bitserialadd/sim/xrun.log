@@ -1,0 +1,159 @@
+xrun: 22.09-s011: (c) Copyright 1995-2023 Cadence Design Systems, Inc.
+TOOL:	xrun	22.09-s011: Started on Aug 29, 2023 at 12:36:07 EDT
+xrun
+	topaddtb.sv
+	../rtl/ps.sv
+	../rtl/serialadd.sv
+	../rtl/sp.sv
+	../rtl/topadd.sv
+	-top topaddtb
+file: topaddtb.sv
+	module worklib.topaddtb:sv
+		errors: 0, warnings: 0
+file: ../rtl/ps.sv
+	module worklib.ps:sv
+		errors: 0, warnings: 0
+file: ../rtl/serialadd.sv
+	module worklib.serialadd:sv
+		errors: 0, warnings: 0
+file: ../rtl/sp.sv
+	module worklib.sp:sv
+		errors: 0, warnings: 0
+file: ../rtl/topadd.sv
+	module worklib.topadd:sv
+		errors: 0, warnings: 0
+	Elaborating the design hierarchy:
+		Caching library 'worklib' ....... Done
+	Top level design units:
+		topaddtb
+xmelab: *W,DSEMEL: This SystemVerilog design will be simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+    ps ps1(a, ctl0, clk, as);
+                          |
+xmelab: *W,CUVMPW (../rtl/topadd.sv,28|26): port sizes differ in port connection(8/1) for the instance(topaddtb.dut) .
+    ps ps2(b, ctl0, clk, bs);
+                          |
+xmelab: *W,CUVMPW (../rtl/topadd.sv,29|26): port sizes differ in port connection(8/1) for the instance(topaddtb.dut) .
+    ps ps3(c, ctl0, clk, cs);
+                          |
+xmelab: *W,CUVMPW (../rtl/topadd.sv,30|26): port sizes differ in port connection(8/1) for the instance(topaddtb.dut) .
+    ps ps4(d, ctl0, clk, ds);
+                          |
+xmelab: *W,CUVMPW (../rtl/topadd.sv,31|26): port sizes differ in port connection(8/1) for the instance(topaddtb.dut) .
+    serialadd a1(as, bs, abs, ctl1, clk);
+                  |
+xmelab: *W,CUVMPW (../rtl/topadd.sv,33|18): port sizes differ in port connection(8/1) for the instance(topaddtb.dut) .
+    serialadd a1(as, bs, abs, ctl1, clk);
+                      |
+xmelab: *W,CUVMPW (../rtl/topadd.sv,33|22): port sizes differ in port connection(8/1) for the instance(topaddtb.dut) .
+    serialadd a1(as, bs, abs, ctl1, clk);
+                           |
+xmelab: *W,CUVMPW (../rtl/topadd.sv,33|27): port sizes differ in port connection(8/1) for the instance(topaddtb.dut) .
+    serialadd a2(cs, ds, cds, ctl1, clk);
+                  |
+xmelab: *W,CUVMPW (../rtl/topadd.sv,34|18): port sizes differ in port connection(8/1) for the instance(topaddtb.dut) .
+    serialadd a2(cs, ds, cds, ctl1, clk);
+                      |
+xmelab: *W,CUVMPW (../rtl/topadd.sv,34|22): port sizes differ in port connection(8/1) for the instance(topaddtb.dut) .
+    serialadd a2(cs, ds, cds, ctl1, clk);
+                           |
+xmelab: *W,CUVMPW (../rtl/topadd.sv,34|27): port sizes differ in port connection(8/1) for the instance(topaddtb.dut) .
+    serialadd a3(abs, cds, sums, ctl2, clk);
+                   |
+xmelab: *W,CUVMPW (../rtl/topadd.sv,36|19): port sizes differ in port connection(8/1) for the instance(topaddtb.dut) .
+    serialadd a3(abs, cds, sums, ctl2, clk);
+                        |
+xmelab: *W,CUVMPW (../rtl/topadd.sv,36|24): port sizes differ in port connection(8/1) for the instance(topaddtb.dut) .
+    serialadd a3(abs, cds, sums, ctl2, clk);
+                              |
+xmelab: *W,CUVMPW (../rtl/topadd.sv,36|30): port sizes differ in port connection(8/1) for the instance(topaddtb.dut) .
+    sp sp1(sums, ctl3, clk, q);
+              |
+xmelab: *W,CUVMPW (../rtl/topadd.sv,38|14): port sizes differ in port connection(8/1) for the instance(topaddtb.dut) .
+	Building instance overlay tables: .................... Done
+	Generating native compiled code:
+		worklib.sp:sv <0x03365d05>
+			streams:   3, words:   473
+		worklib.serialadd:sv <0x46891cd2>
+			streams:   4, words:   884
+		worklib.ps:sv <0x03f5312f>
+			streams:   3, words:   517
+		worklib.topadd:sv <0x21113962>
+			streams:  18, words:  4022
+		worklib.topaddtb:sv <0x570b9ad1>
+			streams:   3, words:  3032
+	Building instance specific data structures.
+	Loading native compiled code:     .................... Done
+	Design hierarchy summary:
+		              Instances  Unique
+		Modules:             10       5
+		Registers:           34      22
+		Scalar wires:        34       -
+		Vectored wires:       8       -
+		Always blocks:       10       5
+		Initial blocks:       1       1
+		Cont. assignments:    9       7
+		Pseudo assignments:  16      16
+	Writing initial simulation snapshot: worklib.topaddtb:sv
+Loading snapshot worklib.topaddtb:sv .................... Done
+xmsim: *W,DSEM2009: This SystemVerilog design is simulated as per IEEE 1800-2009 SystemVerilog simulation semantics. Use -disable_sem2009 option for turning off SV 2009 simulation semantics.
+xcelium> source /opt/cadence/XCELIUM2209/tools/xcelium/files/xmsimrc
+xcelium> run
+xmsim: *W,DVEXACC: some objects excluded from $dumpvars due to access restrictions, use +access+r on command line for access to all objects.
+            File: ./topaddtb.sv, line = 17, pos = 16
+           Scope: topaddtb
+            Time: 0 FS + 0
+
+  0
+  0
+  0
+  x
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+ 10
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+ 10
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+ 10
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+ 10
+  0
+  0
+  0
+  0
+  0
+  0
+  0
+ 10
+  0
+  0
+  0
+  0
+  0
+  0
+Simulation complete via $finish(1) at time 525 NS + 0
+./topaddtb.sv:34         $finish;
+xcelium> exit
+TOOL:	xrun	22.09-s011: Exiting on Aug 29, 2023 at 12:36:08 EDT  (total: 00:00:01)

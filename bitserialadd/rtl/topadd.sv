@@ -23,7 +23,7 @@ module topadd (
     assign ctl2 = ctl[2];
     assign ctl3 = ctl[3];
 
-    logic [7:0] as, bs, cs, ds, abs, cds, sums;
+    logic as, bs, cs, ds, abs, cds, sums;
 
     ps ps1(a, ctl0, clk, as);
     ps ps2(b, ctl0, clk, bs);
